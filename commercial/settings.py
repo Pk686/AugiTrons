@@ -25,12 +25,13 @@ SECRET_KEY = 'wi=d6a*4-#)9fm2p89yj3qzwz(=!55(z!6p($9ml3*2*^q0sqz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'App.apps.AppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -123,3 +124,58 @@ STATIC_URL = '/static/'
 #Managing media
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+JAZZMIN_SETTINGS = {
+    "site_title": "AugiTrons",
+    "site_brand": "AugiTrons",
+    "welcome_sign": "Welcome to the AugiTrons",
+    "copyright": "AugiTrons Ltd",
+    "search_model": ["auth.User", "auth.Group"],
+    "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+        # App with dropdown menu to all its models pages (Permissions checked against models)
+        {"app": "App"},
+    ],
+    "usermenu_links": [
+        {"model": "auth.user"}
+    ],
+    "order_with_respect_to": ["auth.user","auth.Group"],
+    "show_ui_builder": True,
+    
+}
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": False,
+    "accent": "accent-primary",
+    "navbar": "navbar-white navbar-light",
+    "no_navbar_border": False,
+    "navbar_fixed": False,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": False,
+    "sidebar": "sidebar-dark-primary",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "litera",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-outline-primary",
+        "secondary": "btn-outline-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
