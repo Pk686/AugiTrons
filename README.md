@@ -7,3 +7,22 @@
 Note - Make sure you are present in manage.py directory to execute the command.
 
 Happy Coding.
+
+steps to follow for collaborators - 
+# Step 1: Clone the repository (if not done already)
+git clone https://github.com/Pk686/AugiTrons.git
+cd AugiTrons
+
+# Step 2: Create a new branch
+git checkout -b feature-new-update
+
+# Step 3: Make changes to your files (use any editor)
+
+# Step 4: Stage changes
+git add .
+
+# Step 5: Commit changes
+git commit -m "Add new feature to AugiTrons"
+
+# Step 6: Push the branch
+git push origin feature-new-update
