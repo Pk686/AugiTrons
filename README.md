@@ -1,5 +1,5 @@
 1. clone the project and put in some specific folder.
-2. checkout commercial folder and open the directory in vs code/any other editor.
+2. Name the folder as commercial and open the directory in vs code/any other editor.
 3. run the following commands -
    1. py manage.py makemigrations
    2. py manage.py migrate
