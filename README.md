@@ -8,7 +8,7 @@ Note - Make sure you are present in manage.py directory to execute the command.
 
 Happy Coding.
 
-steps to follow for collaborators - 
+**steps to follow for collaborators - **
 # Step 1: Clone the repository (if not done already)
 git clone https://github.com/Pk686/AugiTrons.git
 cd AugiTrons
